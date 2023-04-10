@@ -30,7 +30,7 @@ class BadgeList extends LitElement {
 
 
     async getSearchResults(value = '') {
-      let address = `/api/badge-catalog?search=${value}`;
+      const address = `/api/badge-catalog?search=${value}`;
       const results = await fetch(address).then((response) => {
           if (response.ok) {
               return response.json()

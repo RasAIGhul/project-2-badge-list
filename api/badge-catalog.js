@@ -1,9 +1,10 @@
 
+
 export default async function handler(request, res) {
   const search = request.query.search || '';
-    let catalog= [
+    var catalog= [
       {
-      "titleIcon" : "save",
+      "titleIcon" : "https://brandslogos.com/wp-content/uploads/images/large/aws-cognito-logo.png",
       "title": "Amazon Cognito",
       "paragraph":"",
       "author":"Ryan",
@@ -13,7 +14,7 @@ export default async function handler(request, res) {
       "stepsToComplete":"Creating your first lambda function 2.0 hours" + "\n Putting in your Hello Lambda Node.js code 2.0 Hours",
       },
       {
-      "titleIcon" : "save",
+      "titleIcon" : "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
       "title": "Amazon I AM",
       "paragraph":"",
       "author":"Ryan",
@@ -23,7 +24,7 @@ export default async function handler(request, res) {
       "stepsToComplete":"Creating your first lambda function 2.0 hours" + "\n Putting in your Hello Lambda Node.js code 2.0 Hours"
       },
       {
-      "titleIcon" : "save",
+      "titleIcon" : "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
       "title": "Signing Up For AWS Services",
       "paragraph":"This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.This is the testing paragraph.",
       "author":"Ryan",
@@ -34,7 +35,7 @@ export default async function handler(request, res) {
 
       },
       {
-      "titleIcon" : "save",
+      "titleIcon" : "https://logowik.com/content/uploads/images/aws-lambda2296.jpg",
       "title": "AWS- LAMBDA Phase 1",
       "paragraph":"AWS Lambda is an event-driven, serverless computing platform provided by Amazon" 
       + "as a part of Amazon Web Services. It is a computing service that runs code in response to events" +
@@ -44,12 +45,24 @@ export default async function handler(request, res) {
       "opened": false,
       "collapseIcon": "arrow-drop-up",
       "stepsToComplete":"Creating your first lambda function 2.0 hours" + "\n Putting in your Hello Lambda Node.js code 2.0 Hours"
-      },    
+      }, 
+      { 
+      "titleIcon" : "https://upload.wikimedia.org/wikipedia/commons/b/bc/Amazon-S3-Logo.svg",
+      "title": "Aamazon S3 Phase 1",
+      "paragraph":"AWS Lambda is an event-driven, serverless computing platform provided by Amazon" 
+      + "as a part of Amazon Web Services. It is a computing service that runs code in response to events" +
+      "and automatically manages the computing resources required by that code  \n ",
+      "author":"Ryan",
+      "timeToComplete":2.8,
+      "opened": false,
+      "collapseIcon": "arrow-drop-up",
+      "stepsToComplete":"Creating your first lambda function 2.0 hours" + "\n Putting in your Hello Lambda Node.js code 2.0 Hours"
+      },      
 
     ];
-    catalog.map((badgeC) => {
-      badgeC.index = badgeC.title.toLowerCase() + " " + badgeC.author.toLowerCase() + " " + badgeC.paragraph.toLowerCase()+" "+
-      badgeC.stepsToComplete.toLowerCase()+" "+badgeC.timeToComplete.toString().toLowerCase();
+    catalog.map((badge) => {
+      badge.index = badge.title.toLowerCase() + " " + badge.author.toLowerCase() + " " + badge.paragraph.toLowerCase()+" "+
+      badge.stepsToComplete.toLowerCase()+" "+badge.timeToComplete.toString().toLowerCase();
     });
     catalog = catalog.filter((badge) => {
       return badge.index.indexOf(search.toLowerCase()) > -1;

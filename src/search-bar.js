@@ -53,8 +53,8 @@ class SearchBar extends LitElement {
     return html`
 
 
-    <input class="form-control" type="text" id="site-search" name="q" 
-    placeholder = "Search Content, Topics, and People" value="${this.value}" @input="${this._handleInput}">
+    <input class="form-control" id="site-search" name="q" 
+    placeholder = "Search Content, Topics, and People" type="text" value="${this.value}" @input="${this._handleInput}">
     `;
   }
   _handleInput(e) {
