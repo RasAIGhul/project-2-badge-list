@@ -4,7 +4,7 @@ export default async function handler(request, res) {
   const search = request.query.search || '';
     var catalog= [
       {
-      "titleIcon" : "https://brandslogos.com/wp-content/uploads/images/large/aws-cognito-logo.png",
+      "titleIcon" : "https://3.bp.blogspot.com/-MN16Z_eih3U/W5KaI5aNolI/AAAAAAAAAE0/jNwSEn_moGMtbg7G2WOxKZiiIaHF06e9gCLcBGAs/s1600/MobileServices_AmazonCognito.png",
       "title": "Amazon Cognito",
       "paragraph":"",
       "author":"Ryan",
@@ -14,7 +14,7 @@ export default async function handler(request, res) {
       "stepsToComplete":"Creating your first lambda function 2.0 hours" + "\n Putting in your Hello Lambda Node.js code 2.0 Hours",
       },
       {
-      "titleIcon" : "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "titleIcon" : "https://spin.atomicobject.com/wp-content/uploads/AWS-IAM-logo.jpg",
       "title": "Amazon I AM",
       "paragraph":"",
       "author":"Ryan",
